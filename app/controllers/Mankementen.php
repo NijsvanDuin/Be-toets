@@ -23,7 +23,6 @@ class Mankementen extends Controller
         $rows = '';
         $first = '';
 
-
         foreach ($result as $info) {
             $rows .= "
             <tr>
