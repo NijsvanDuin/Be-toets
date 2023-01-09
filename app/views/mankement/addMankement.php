@@ -3,8 +3,8 @@
 
 
 <form action="<?= URLROOT ?>/mankementen/addMankement" method="post">
-    <label for="mankementen">Mankementen</label><br>
-    <input type="text" name="mankementen" id="mankementen"><br>
+    <label for="mankement">Mankementen</label><br>
+    <input type="text" name="mankement" id="mankement"><br>
     <br>
     <input type="submit" value="Toevoegen">
 </form>

@@ -24,7 +24,7 @@ class Mankement
         $sql = "INSERT INTO Mankement (AutoId, Datum, Mankement) VALUES (2, '2022-12-12', :Mankement)";
         $this->db->query($sql);
         // $this->db->bind(':AutoId', $post['AutoId'], PDO::PARAM_INT);
-        $this->db->bind(':Mankement', $post['Mankement'], PDO::PARAM_STR);
+        $this->db->bind(':Mankement', $post['mankement'], PDO::PARAM_STR);
         return $this->db->execute();
     }
 }
