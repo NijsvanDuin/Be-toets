@@ -22,10 +22,13 @@ class Mankement
     }
     public function addMankement($post)
     {
-        $sql = "INSERT INTO Mankement (AutoId, Datum, Mankement) VALUES (2, '2023-01-09', :Mankement)";
+        $Timezone = date_default_timezone_get();
+        $currentDate= date("Y-m-d");
+        $sql = "INSERT INTO Mankement (AutoId, Datum, Mankement) VALUES (2, :Datum, :Mankement)";
         $this->db->query($sql);
         // $this->db->bind(':AutoId', $post['AutoId'], PDO::PARAM_INT);
         $this->db->bind(':Mankement', $post['mankement'], PDO::PARAM_STR);
+        $this->db->bind(':Datum', $currentDate, PDO::PARAM_STR);
         return $this->db->execute();
     }
 }
